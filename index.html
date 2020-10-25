@@ -3,25 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Google & Reddit Hijacking!</title>
+    <title>Even more elements!</title>
   </head>
   <body>
-    <h2>Hijacking Services</h2>
+    <h1>More inputs!</h1>
     <hr />
-    <h3>Search Reddit</h3>
-    <form action="https://www.reddit.com/search">
-      <input type="text" name="q" placeholder="Enter your search query here" />
-      <button>Search Reddit</button>
-    </form>
-    <h3>Search Google</h3>
-    <form action="https://www.google.gr/search">
-      <input type="text" name="q" placeholder="Enter your Google Query" />
-      <button>Search Google</button>
-    </form>
-    <h3>Search Youtube</h3>
-    <form action="https://www.youtube.com/results">
-      <input type="text" name="search_query" placeholder="Search Youtube" />
-      <button>Search</button>
+    <form action="/birds">
+      <h2>Radios</h2>
+      <p>
+        <label for="aek">AEK</label>
+        <input type="radio" name="favouriteTeam" id="aek" value="aek" />
+        <label for="osfp">Olympiacos</label>
+        <input type="radio" name="favouriteTeam" id="osfp" value="osfp" />
+        <label for="pao">Panathinaikos</label>
+        <input type="radio" name="favouriteTeam" id="pao" value="pao" />
+      </p>
+      <h2>Pets</h2>
+      <p>
+        <select name="petSelected" id="pets">
+          <option value="none" selected>--</option>
+          <option value="dog">Dog</option>
+          <option value="katzo">Cat</option>
+          <option value="fishy">Fish</option>
+          <option value="hamy">Hamster</option>
+          <option value="dino">Dinosaur</option>
+          <option value="sc">SchoobyDoo</option>
+        </select>
+      </p>
+      <button>Submit</button>
     </form>
   </body>
 </html>
