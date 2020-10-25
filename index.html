@@ -3,38 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Forms Demo</title>
+    <title>Google & Reddit Hijacking!</title>
   </head>
   <body>
-    <h1>Forms Demo</h1>
-    <form action="/entities.html">
-      <p>
-        <label for="username">Username</label>
-        <input
-          name="un"
-          type="text"
-          placeholder="Enter username"
-          id="username"
-        />
-      </p>
-      <p>
-        <label for="password">Password</label>
-        <input
-          name="pw"
-          type="password"
-          placeholder="Enter password"
-          id="password"
-        />
-      </p>
-      <p>
-        <label for="confirmPassowrd">Confirm the password</label>
-        <input
-          type="passowrd"
-          id="confirmPassowrd"
-          placeholder="Confirm your password"
-        />
-      </p>
-      <button>Submit</button>
+    <form action="https://www.reddit.com/search">
+      <input type="text" name="q" placeholder="Enter your search query here" />
+      <button>Search Reddit</button>
+    </form>
+    <form action="https://www.google.gr/search">
+      <input type="text" name="q" placeholder="Enter your Google Query" />
+      <button>Search Google</button>
     </form>
   </body>
 </html>
