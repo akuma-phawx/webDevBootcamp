@@ -1,16 +1,26 @@
-li {
-  color: blue;
+body {
+  background-color: #16302b;
 }
 
-.done {
-  color: grey;
+h1 {
+  color: #fceb8d;
+  text-align: center;
+}
+.maininfo h2 {
+  color: #fceb8d;
 }
 
-#clear {
-  background-color: red;
+.maininfo p {
+  color: #c0e5c8;
+}
+
+.formdata h2 {
+  color: #fceb8d;
+}
+.formdata label {
+  color: #c0e5c8;
+}
+
+nav a {
   color: white;
-}
-
-li a {
-  color: red;
 }
