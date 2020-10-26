@@ -21,6 +21,16 @@ h1 {
   color: #c0e5c8;
 }
 
+table th {
+  color: navajowhite;
+  font-weight: 700;
+}
+
+table td {
+  color: white;
+}
+
 nav a {
+  font-weight: 700;
   color: white;
 }
