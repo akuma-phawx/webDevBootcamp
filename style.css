@@ -1,36 +1,19 @@
-body {
-  background-color: #16302b;
+div {
+  width: 200px;
+  height: 200px;
+  background-color: black;
+  color: coral;
+  border: 5px solid blue;
+  border-radius: 50%;
 }
 
 h1 {
-  color: #fceb8d;
-  text-align: center;
-}
-.maininfo h2 {
-  color: #fceb8d;
-}
-
-.maininfo p {
-  color: #c0e5c8;
+  width: 100px;
+  background-color: coral;
+  color: black;
+  padding: 0px 44px 0px 100px;
 }
 
-.formdata h2 {
-  color: #fceb8d;
-}
-.formdata label {
-  color: #c0e5c8;
-}
-
-table th {
-  color: navajowhite;
-  font-weight: 700;
-}
-
-table td {
-  color: white;
-}
-
-nav a {
-  font-weight: 700;
-  color: white;
+button {
+  padding: 0px 50px 10px 9px;
 }
