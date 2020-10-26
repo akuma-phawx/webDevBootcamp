@@ -1,19 +1,16 @@
 div {
   width: 200px;
   height: 200px;
-  background-color: black;
-  color: coral;
-  border: 5px solid blue;
-  border-radius: 50%;
-}
-
-h1 {
-  width: 100px;
   background-color: coral;
-  color: black;
-  padding: 0px 44px 0px 100px;
+  border: 2px solid black;
+  margin: 15px;
+  display: inline-block;
 }
 
-button {
-  padding: 0px 50px 10px 9px;
+p {
+  display: none;
+}
+
+div:hover {
+  background-color: blue;
 }
