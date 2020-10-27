@@ -1,35 +1,7 @@
-section {
-  background-color: blue;
-  width: 500px;
-  height: 500px;
+#rems h2 {
+  font-size: 2rem;
 }
 
-div {
-  background-color: coral;
-  width: 50%;
-  height: 50%;
-}
-
-h1 {
-  font-size: 50px;
-  border: 1px solid black;
-  line-height: 200%;
-}
-
-article {
-  font-size: 50px;
-}
-h2 {
-  font-size: 1em;
-  margin-left: 1em;
-}
-
-p {
-  font-size: 1em;
-}
-
-button {
-  font-size: 1em;
-  padding: 0 1em;
-  border-radius: 0.5em;
+#rems h1 {
+  font-size: 2rem;
 }
