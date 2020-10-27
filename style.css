@@ -1,44 +1,15 @@
+section {
+  width: 80%;
+  height: 800px;
+  /* background-image: url("https://image.freepik.com/free-photo/decorative-plant-inside-minimal-vase_23-2148207067.jpg"); */
+  background: no-repeat
+      url("https://image.freepik.com/free-photo/decorative-plant-inside-minimal-vase_23-2148207067.jpg"),
+    center / 20%;
+  margin: 0 auto;
+}
+
 h1 {
-  width: 300px;
-  padding: 0.7em;
-  background-color: #718f94;
-  border: 5px solid #545775;
-  margin: 20px auto;
+  font-size: 50px;
+  color: white;
   text-align: center;
-  font-family: "Courier New", Courier, monospace;
-  font-weight: lighter;
-}
-
-h1:nth-of-type(2) {
-  background-color: #90b494;
-}
-h1:nth-of-type(3) {
-  background-color: #bfc8ad;
-}
-h1:nth-of-type(4) {
-  background-color: #dbcfb0;
-}
-
-section:first-of-type h1:hover:nth-of-type(1) {
-  transform: rotate(55deg);
-}
-
-section:first-of-type h1:hover:nth-of-type(2) {
-  transform: translateX(-100px);
-}
-
-section:first-of-type h1:hover:nth-of-type(3) {
-  transform: translateY(500px);
-}
-
-section:nth-of-type(2) h1:hover:nth-of-type(3) {
-  transform: skew(5deg, 25deg);
-}
-
-section:nth-of-type(2) h1:hover:nth-of-type(4) {
-  transform: translateX(-300px) rotate(0.5turn) scaleY(1.5);
-}
-
-section:nth-of-type(2) {
-  transform: scale(0.5);
 }
