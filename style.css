@@ -1,41 +1,33 @@
-body {
-  margin: 0;
+.circle {
+  width: 200px;
+  height: 200px;
+  background-color: magenta;
+  border: 2px solid black;
+  transition: background-color 1s, border-radius 2s;
 }
 
-div {
+.circle:hover {
+  background-color: cyan;
+  border-radius: 50%;
+}
+
+section div {
   width: 100px;
   height: 100px;
-  background-color: darkblue;
-  border: 2px solid black;
-  margin: 10px;
-  display: inline-block;
+  background-color: teal;
+  margin-bottom: 10px;
+  transition: background-color 5s, margin-left 5s;
 }
 
-#middle {
-  background-color: crimson;
+section:hover div {
+  background-color: mediumorchid;
+  margin-left: 500px;
 }
 
-#static #middle {
-  position: static;
+div:nth-of-type(1) {
+  transition-timing-function: esae-in;
 }
 
-#relative #middle {
-  position: relative;
-  top: 50px;
-  left: 50px;
-}
-
-#absolute {
-  position: relative;
-}
-#absolute #middle {
-  position: absolute;
-  top: 1px;
-  left: 10px;
-}
-
-#fixed #middle {
-  position: fixed;
-  top: 0;
-  left: 0;
+div:nth-of-type(2) {
+  transition-timing-function: ease-out;
 }
