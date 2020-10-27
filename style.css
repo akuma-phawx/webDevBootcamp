@@ -38,3 +38,7 @@ section:nth-of-type(2) h1:hover:nth-of-type(3) {
 section:nth-of-type(2) h1:hover:nth-of-type(4) {
   transform: translateX(-300px) rotate(0.5turn) scaleY(1.5);
 }
+
+section:nth-of-type(2) {
+  transform: scale(0.5);
+}
