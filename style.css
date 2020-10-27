@@ -1,15 +1,3 @@
-section {
-  width: 80%;
-  height: 800px;
-  /* background-image: url("https://image.freepik.com/free-photo/decorative-plant-inside-minimal-vase_23-2148207067.jpg"); */
-  background: no-repeat
-      url("https://image.freepik.com/free-photo/decorative-plant-inside-minimal-vase_23-2148207067.jpg"),
-    center / 20%;
-  margin: 0 auto;
-}
-
 h1 {
-  font-size: 50px;
-  color: white;
-  text-align: center;
+  font-family: "Grandstander", sans-serif;
 }
