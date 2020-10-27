@@ -1,33 +1,40 @@
-.circle {
-  width: 200px;
-  height: 200px;
-  background-color: magenta;
-  border: 2px solid black;
-  transition: background-color 1s, border-radius 2s;
+h1 {
+  width: 300px;
+  padding: 0.7em;
+  background-color: #718f94;
+  border: 5px solid #545775;
+  margin: 20px auto;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: lighter;
 }
 
-.circle:hover {
-  background-color: cyan;
-  border-radius: 50%;
+h1:nth-of-type(2) {
+  background-color: #90b494;
+}
+h1:nth-of-type(3) {
+  background-color: #bfc8ad;
+}
+h1:nth-of-type(4) {
+  background-color: #dbcfb0;
 }
 
-section div {
-  width: 100px;
-  height: 100px;
-  background-color: teal;
-  margin-bottom: 10px;
-  transition: background-color 5s, margin-left 5s;
+section:first-of-type h1:hover:nth-of-type(1) {
+  transform: rotate(55deg);
 }
 
-section:hover div {
-  background-color: mediumorchid;
-  margin-left: 500px;
+section:first-of-type h1:hover:nth-of-type(2) {
+  transform: translateX(-100px);
 }
 
-div:nth-of-type(1) {
-  transition-timing-function: esae-in;
+section:first-of-type h1:hover:nth-of-type(3) {
+  transform: translateY(500px);
 }
 
-div:nth-of-type(2) {
-  transition-timing-function: ease-out;
+section:nth-of-type(2) h1:hover:nth-of-type(3) {
+  transform: skew(5deg, 25deg);
+}
+
+section:nth-of-type(2) h1:hover:nth-of-type(4) {
+  transform: translateX(-300px) rotate(0.5turn) scaleY(1.5);
 }
