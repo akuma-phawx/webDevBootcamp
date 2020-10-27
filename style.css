@@ -1,16 +1,35 @@
+section {
+  background-color: blue;
+  width: 500px;
+  height: 500px;
+}
+
 div {
-  width: 200px;
-  height: 200px;
   background-color: coral;
-  border: 2px solid black;
-  margin: 15px;
-  display: inline-block;
+  width: 50%;
+  height: 50%;
+}
+
+h1 {
+  font-size: 50px;
+  border: 1px solid black;
+  line-height: 200%;
+}
+
+article {
+  font-size: 50px;
+}
+h2 {
+  font-size: 1em;
+  margin-left: 1em;
 }
 
 p {
-  display: none;
+  font-size: 1em;
 }
 
-div:hover {
-  background-color: blue;
+button {
+  font-size: 1em;
+  padding: 0 1em;
+  border-radius: 0.5em;
 }
