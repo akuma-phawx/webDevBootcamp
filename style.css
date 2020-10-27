@@ -6,24 +6,41 @@ h1 {
 }
 #container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap-reverse;
-
+  flex-wrap: nowrap;
   background-color: #003049;
   width: 90%;
   height: 500px;
-  margin: 0 auto;
+  margin: 5px auto;
   border: 5px solid #003049;
 }
 
 #container div {
-  width: 150px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
+  max-width: 300px;
+  min-width: 80px;
   transition: transform 0.5s;
+  flex-basis: 200px;
+  flex-shrink: 5;
 }
 
-#container div:hover {
-  transform: translateX(1em);
+main {
+  width: 80%;
+  margin: 0 auto;
+  border: 5px solid black;
+  height: 500px;
+  display: flex;
+}
+
+main .sidebar {
+  background-color: #6930c3;
+  border: 2px solid white;
+  flex: 1 2 300px;
+}
+
+main .maincontent {
+  background-color: #80ffdb;
+  flex: 2 1 800px;
 }
