@@ -1,46 +1,52 @@
 body {
   font-family: "Open Sans", sans-serif;
 }
+
 h1 {
+  font-size: 6em;
   text-align: center;
 }
-#container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: nowrap;
-  background-color: #003049;
-  width: 90%;
-  height: 500px;
-  margin: 5px auto;
-  border: 5px solid #003049;
+nav {
+  font-size: 1.5em;
 }
 
-#container div {
-  width: 100px;
-  height: 100px;
-  max-width: 300px;
-  min-width: 80px;
-  transition: transform 0.5s;
-  flex-basis: 200px;
-  flex-shrink: 5;
+ul,
+li {
+  display: inline;
+  margin: 0;
+  padding: 0;
 }
 
-main {
-  width: 80%;
-  margin: 0 auto;
-  border: 5px solid black;
-  height: 500px;
-  display: flex;
+/* @media (min-width: 600px) and (max-width: 800px) {
+  h1 {
+    color: red;
+  }
+} */
+
+h1 {
+  color: red;
 }
 
-main .sidebar {
-  background-color: #6930c3;
-  border: 2px solid white;
-  flex: 1 2 300px;
+@media (min-width: 600px) {
+  h1 {
+    color: orange;
+  }
 }
 
-main .maincontent {
-  background-color: #80ffdb;
-  flex: 2 1 800px;
+@media (min-width: 1000px) {
+  h1 {
+    color: blue;
+  }
+}
+
+@media (min-width: 1400px) {
+  h1 {
+    color: green;
+  }
+}
+
+@media (orientation: landscape) {
+  body {
+    background-color: magenta;
+  }
 }
