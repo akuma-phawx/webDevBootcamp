@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Grid Introduction</title>
+    <title>Navbars</title>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
@@ -13,38 +13,115 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
-      <h2 class="display-2">Forms</h2>
-      <form action="#">
-        <div class="form-row">
-        <div class="form-group col">
-          <label for="email">E-mail</label>
-          <input class="form-control" type="email" name="email" id="email" />
-        </div>
-        <div class="form-group col-md-6">
-          <label for="password">Password:</label>
-          <input
-            class="form-control"
-            type="password"
-            name="password"
-            id="password"
-          />
+    <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-primary">
+      <a class="navbar-brand" href="#">Primary</a>
+      <button
+        class="navbar-toggler"
+        data-toggle="collapse"
+        data-target="#expandme"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="expandme">
+        <div class="navbar-nav">
+          <a href="Home" class="nav-item nav-link">Home</a>
+          <a href="Home" class="nav-item nav-link">About</a>
+          <a href="Home" class="nav-item nav-link">Contact</a>
         </div>
       </div>
-        <div class="form-group">
-          <label for="state">State</label>
-          <select class="form-control" name="state" id="state">
-            <option value="AL">Alabama</option>
-            <option value="Ak">Alaska</option>
-          </select>
-        </div>
-        <form class="was-validated">
-          <div class="custom-control custom-checkbox mb-3">
-            <input type="checkbox" class="custom-control-input" id="customControlValidation1" required>
-            <label class="custom-control-label" for="customControlValidation1">Check this custom checkbox</label>
-            <div class="invalid-feedback">Example invalid feedback text</div>
+    </nav>
+
+    <div class="container">
+      <h1 class="display-1 text-danger">
+        Hello
+        <svg
+          width="1em"
+          height="1em"
+          viewBox="0 0 16 16"
+          class="bi bi-music-note-beamed"
+          fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M6 13c0 1.105-1.12 2-2.5 2S1 14.105 1 13c0-1.104 1.12-2 2.5-2s2.5.896 2.5 2zm9-2c0 1.105-1.12 2-2.5 2s-2.5-.895-2.5-2 1.12-2 2.5-2 2.5.895 2.5 2z"
+          />
+          <path fill-rule="evenodd" d="M14 11V2h1v9h-1zM6 3v10H5V3h1z" />
+          <path
+            d="M5 2.905a1 1 0 0 1 .9-.995l8-.8a1 1 0 0 1 1.1.995V3L5 4V2.905z"
+          />
+        </svg>
+      </h1>
+      <button class="btn btn-lg btn-danger">
+        Delete
+        <svg
+          width="1em"
+          height="1em"
+          viewBox="0 0 16 16"
+          class="bi bi-trash"
+          fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"
+          />
+          <path
+            fill-rule="evenodd"
+            d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4L4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"
+          />
+        </svg>
+      </button>
+      <div class="row">
+        <div class="col-6">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"
+                ><svg
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 16 16"
+                  class="bi bi-search"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"
+                  /></svg
+              ></span>
+            </div>
+            <input
+              type="text"
+              name=""
+              id=""
+              class="form-control"
+              placeholder="Search"
+            />
           </div>
-      </form>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      quam eligendi facere natus vitae dolor corporis veritatis. Eius est
+      tempora aliquid adipisci magnam tempore rem voluptates, quis maiores
+      omnis, veniam molestiae. Odit quam est adipisci nisi autem inventore
+      eveniet animi, dolore soluta, maxime reprehenderit, ipsum nesciunt fugiat.
+      Natus earum aliquam veniam repudiandae, reiciendis commodi enim ab
+      repellat repellendus sit odit pariatur ullam vero reprehenderit labore
+      alias tempore perspiciatis suscipit accusantium fugiat. Suscipit ad
+      maiores cum deleniti dolor. Fuga, earum nostrum. Possimus blanditiis,
+      culpa harum provident quas iure a in corrupti perspiciatis reiciendis vero
+      pariatur impedit aut ea molestiae cum rem omnis vitae eos! Illum culpa
+      alias molestiae. Autem, dignissimos repudiandae ducimus sint omnis magnam
+      consequuntur doloremque dicta error? Placeat qui provident, commodi
+      eveniet repudiandae deleniti quos tenetur quasi atque dolorum deserunt
+      odit numquam vero nihil sint esse. Praesentium sequi quo accusantium,
+      eaque quibusdam dolorum iste placeat eligendi, voluptates doloribus id
+      soluta odio similique voluptatem officia? Molestias quibusdam consectetur
+      optio! Praesentium voluptas eius ea alias obcaecati doloremque illum.
     </div>
 
     <script
