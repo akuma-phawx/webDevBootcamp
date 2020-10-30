@@ -14,80 +14,39 @@
   </head>
   <body>
     <div class="container">
-      <div class="row">
-        <div class="col-4 bg-danger text-black">One Third</div>
-        <div class="col-8 bg-info text-black">Two Thirds</div>
+      <h2 class="display-2">Forms</h2>
+      <form action="#">
+        <div class="form-row">
+        <div class="form-group col">
+          <label for="email">E-mail</label>
+          <input class="form-control" type="email" name="email" id="email" />
+        </div>
+        <div class="form-group col-md-6">
+          <label for="password">Password:</label>
+          <input
+            class="form-control"
+            type="password"
+            name="password"
+            id="password"
+          />
+        </div>
       </div>
-      <div class="row">
-        <div class="col-sm-3 bg-warning text-black">One Quarter</div>
-        <div class="col-sm-6 bg-primary text-black">One Half</div>
-        <div class="col-sm-3 bg-warning text-black">One Quarter</div>
-      </div>
+        <div class="form-group">
+          <label for="state">State</label>
+          <select class="form-control" name="state" id="state">
+            <option value="AL">Alabama</option>
+            <option value="Ak">Alaska</option>
+          </select>
+        </div>
+        <form class="was-validated">
+          <div class="custom-control custom-checkbox mb-3">
+            <input type="checkbox" class="custom-control-input" id="customControlValidation1" required>
+            <label class="custom-control-label" for="customControlValidation1">Check this custom checkbox</label>
+            <div class="invalid-feedback">Example invalid feedback text</div>
+          </div>
+      </form>
     </div>
 
-    <h2 class="display-2">Responsive Grid</h2>
-    <div class="row">
-      <div class="col-md-6 col-xl-3 bg-info">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur a
-        eaque fugiat non asperiores velit eligendi sit in labore, quam et ad
-        quis, reprehenderit ducimus quos nesciunt animi adipisci corrupti?
-      </div>
-      <div class="col-md-6 col-xl-3 bg-warning">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur a
-        eaque fugiat non asperiores velit eligendi sit in labore, quam et ad
-        quis, reprehenderit ducimus quos nesciunt animi adipisci corrupti?
-      </div>
-      <div class="col-md-6 col-xl-3 bg-info">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur a
-        eaque fugiat non asperiores velit eligendi sit in labore, quam et ad
-        quis, reprehenderit ducimus quos nesciunt animi adipisci corrupti?
-      </div>
-      <div class="col-md-6 col-xl-3 bg-warning">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur a
-        eaque fugiat non asperiores velit eligendi sit in labore, quam et ad
-        quis, reprehenderit ducimus quos nesciunt animi adipisci corrupti?
-      </div>
-    </div>
-    <hr />
-    <div class="row no-gutters">
-      <div class="col-xl-4 col-md-6 col-xs">
-        <img
-          class="img-fluid"
-          src="https://images.unsplash.com/photo-1602526428660-b3096615cae0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60"
-          alt=""
-        />
-      </div>
-      <div class="col-xl-4 col-md-6">
-        <img
-          class="img-fluid"
-          src="https://images.unsplash.com/photo-1601929254620-965fb29df812?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60"
-          alt=""
-        />
-      </div>
-      <div class="col-xl-4 col-md-6">
-        <img
-          class="img-fluid"
-          src="https://images.unsplash.com/photo-1602541975179-9e5fe41d21ec?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60"
-          alt=""
-        />
-      </div>
-    </div>
-
-    <h3>Justify Content</h3>
-    <div class="row border justify-content-center justify-content-lg-start">
-      <div class="col-md-4 bg-primary">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti
-        perferendis delectus enim! Consequatur, ipsa sint! Sunt accusantium
-        error sed, modi quidem eveniet dolores quos tempore expedita, velit,
-        ipsam quo deleniti?
-      </div>
-      <div class="col-md-4 bg-info">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti
-        perferendis delectus enim! Consequatur, ipsa sint! Sunt accusantium
-        error sed, modi quidem eveniet dolores quos tempore expedita, velit,
-        ipsam quo deleniti?
-      </div>
-    </div>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
