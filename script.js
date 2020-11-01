@@ -1,34 +1,31 @@
 const log = console.log.bind(console);
 
-let maximum = parseInt(prompt("Enter your max number:"));
+let input = prompt("What would you like to do?");
+const toDo = ["Collect Eggs", "Eat Dinner"];
 
-while (!maximum) {
-  maximum = parseInt(prompt("Invalid. Again:"));
-}
-
-const targetNum = Math.floor(Math.random() * maximum) + 1;
-log(targetNum);
-log(targetNum);
-log(targetNum);
-log(targetNum);
-
-let guess = prompt("Enter your first guess:");
-
-let tries = 1;
-while (parseInt(guess) !== targetNum) {
-  if (guess === "q") {
-    break;
+while (input !== "quit" && input !== "q") {
+  //Listing the tasks
+  if (input === "list") {
+    log("********");
+    for (let i = 0; i < toDo.length; i++) {
+      log(`[${i}] - ${toDo[i]}`);
+    }
+    log("********");
+  } else if (input === "new") {
+    const toAdd = prompt("Give task to add to the list");
+    toDo.push(toAdd);
+    log("Task successfully added to the list :)");
+  } else if (input === "delete") {
+    const indexGiven = parseInt(prompt("Enter index to delete"));
+    if (!Number.isNaN(indexGiven)) {
+      toDo.splice(indexGiven, 1);
+      log("Task successfully deleted");
+    } else {
+      log("Unknown index");
+    }
   }
-  tries++;
-  if (parseInt(guess) > targetNum) {
-    guess = prompt("Higher try again");
-  } else {
-    guess = prompt("Lower try again");
-  }
+
+  input = prompt("What would you like to do?");
 }
 
-if (guess === "q") {
-  log("Ok, quitting");
-} else {
-  log(`You got it right. It took you ${tries} tries`);
-}
+log("Exiting...");
