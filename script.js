@@ -22,3 +22,18 @@ const restaurant = {
 
 const fullAddress = `${restaurant.address}, ${restaurant.city}, ${restaurant.state} ${restaurant.zipcode}`;
 log(fullAddress);
+
+const comments = [
+  {
+    username: "Tammy",
+    text: "ewwww",
+    votes: 9,
+  },
+  {
+    username: "Fishboy",
+    text: "glub glub glub",
+    votes: 391931,
+  },
+];
+
+log(comments[1].text);
