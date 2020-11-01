@@ -1,21 +1,34 @@
 const log = console.log.bind(console);
 
-const people = ["Scooby", "Velma", "Daphne", "Shaggy", "Fred"];
+let maximum = parseInt(prompt("Enter your max number:"));
 
-const seatingChart = [
-  ["Kristen", "Erik", "Domna"],
-  ["Christopher", "Pegasus", "Fearwell"],
-  ["Ariel", "Yamaha", "Teddy"],
-];
+while (!maximum) {
+  maximum = parseInt(prompt("Invalid. Again:"));
+}
 
-for (let i = 0; i < seatingChart.length; i++) {
-  for (let j = 0; j < seatingChart[i].length; j++) {
-    log(seatingChart[i][j]);
+const targetNum = Math.floor(Math.random() * maximum) + 1;
+log(targetNum);
+log(targetNum);
+log(targetNum);
+log(targetNum);
+
+let guess = prompt("Enter your first guess:");
+
+let tries = 1;
+while (parseInt(guess) !== targetNum) {
+  if (guess === "q") {
+    break;
+  }
+  tries++;
+  if (parseInt(guess) > targetNum) {
+    guess = prompt("Higher try again");
+  } else {
+    guess = prompt("Lower try again");
   }
 }
 
-let count = 0;
-while (count < 10) {
-  count++;
-  console.log(count);
+if (guess === "q") {
+  log("Ok, quitting");
+} else {
+  log(`You got it right. It took you ${tries} tries`);
 }
