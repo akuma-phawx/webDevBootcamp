@@ -1,4 +1,5 @@
-const allButtons = document.querySelectorAll("button");
+const button = document.querySelector("button");
+const input = document.querySelector("input");
 const makeRandColor = () => {
   const randomRed = Math.floor(Math.random() * 256);
   const randomBlue = Math.floor(Math.random() * 256);
@@ -6,10 +7,16 @@ const makeRandColor = () => {
   return `rgb(${randomRed},${randomBlue},${randomGreen})`;
 };
 
-for (const button of allButtons) {
-  button.addEventListener("click", colorize);
-}
+button.addEventListener("click", (evt) => {
+  console.log(evt);
+});
 
+input.addEventListener("keydown", (e) => {
+  console.log(e);
+  console.log(e.key);
+  console.log(e.code);
+  makeRandColor();
+});
 function colorize() {
   this.style.background = makeRandColor();
 }
