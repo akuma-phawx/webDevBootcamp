@@ -13,3 +13,9 @@ const textToLoop =
 //   pokeContainer.classList.add("toInner");
 //   container.appendChild(pokeContainer);
 // }
+
+const but = document.querySelector("#mybut");
+console.dir(but);
+but.onclick = () => {
+  alert("go away");
+};
