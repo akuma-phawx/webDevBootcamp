@@ -1,17 +1,8 @@
-.toInner {
-  display: inline-block;
-}
-
-.toInner span {
-  display: block;
+h1 {
   text-align: center;
 }
 
-.toInner img {
-  display: block;
-}
-
-.toInner:hover {
-  border: 2px solid blue;
-  background-color: red;
+.container {
+  display: flex;
+  justify-content: center;
 }
