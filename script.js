@@ -1,22 +1,20 @@
-const button = document.querySelector("button");
-const input = document.querySelector("input");
-const makeRandColor = () => {
-  const randomRed = Math.floor(Math.random() * 256);
-  const randomBlue = Math.floor(Math.random() * 256);
-  const randomGreen = Math.floor(Math.random() * 256);
-  return `rgb(${randomRed},${randomBlue},${randomGreen})`;
+const form = document.querySelector("#registrationForm");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const username = form.elements.username;
+  const tweet = form.elements.tweet;
+  addTweet(username.value, tweet.value);
+  username.value = "";
+  tweet.value = "";
+});
+
+const addTweet = (username, tweet) => {
+  const list = document.querySelector("#listTweet");
+  const liToAppend = document.createElement("li");
+  const bold = document.createElement("b");
+  bold.append(username);
+  liToAppend.append(bold);
+  liToAppend.append(` - ${tweet}`);
+  list.appendChild(liToAppend);
 };
-
-button.addEventListener("click", (evt) => {
-  console.log(evt);
-});
-
-input.addEventListener("keydown", (e) => {
-  console.log(e);
-  console.log(e.key);
-  console.log(e.code);
-  makeRandColor();
-});
-function colorize() {
-  this.style.background = makeRandColor();
-}
