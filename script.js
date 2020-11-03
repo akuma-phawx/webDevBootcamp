@@ -1,34 +1,25 @@
-const body = document.body;
-
-// setTimeout(() => {
-//   body.style.backgroundColor = "orange";
-//   setTimeout(() => {
-//     body.style.backgroundColor = "yellow";
-
-//     setTimeout(() => {
-//       body.style.backgroundColor = "green";
-//       setTimeout(() => {
-//         body.style.backgroundColor = "blue";
-//       }, 1000);
-//     }, 1000);
-//   }, 1000);
-// }, 1000);
-
-const delayedColorChange = (newColor, delay, doNext) => {
+// THE CALLBACK VERSION
+const fakeRequestCallback = (url, success, failure) => {
+  const delay = Math.floor(Math.random() * 4500) + 500;
   setTimeout(() => {
-    body.style.backgroundColor = newColor;
-    doNext && doNext();
+    if (delay > 4000) {
+      failure("Connection Timeout :(");
+    } else {
+      success(`Here is your fake data from ${url}`);
+    }
   }, delay);
 };
 
-delayedColorChange("olive", 1000, () => {
-  delayedColorChange("green", 1000, () => {
-    delayedColorChange("blue", 1000, () => {
-      delayedColorChange("red", 1000, () => {
-        delayedColorChange("orange", 1000, () => {
-          delayedColorChange("magenta", 1000, () => {});
-        });
-      });
-    });
+// THE PROMISE VERSION
+const fakeRequestPromise = (url) => {
+  return new Promise((resolve, reject) => {
+    const delay = Math.floor(Math.random() * 4500) + 500;
+    setTimeout(() => {
+      if (delay > 4000) {
+        reject("Connection Timeout :(");
+      } else {
+        resolve(`Here is your fake data from ${url}`);
+      }
+    }, delay);
   });
-});
+};
