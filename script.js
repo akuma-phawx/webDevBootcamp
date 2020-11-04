@@ -41,7 +41,10 @@ const fetchDadJoke = async () => {
     },
   };
   const res = await axios.get("https://icanhazdadjoke.com/", config);
-  console.log(res.data.joke);
+  p.innerText = res.data.joke;
 };
 
-fetchDadJoke();
+const button = document.querySelector("#generateJoke");
+const p = document.querySelector("#jokecontext");
+
+button.addEventListener("click", fetchDadJoke);
