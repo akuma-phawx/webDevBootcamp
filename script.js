@@ -1,50 +1,28 @@
-// fetch("https://api.cryptonator.com/api/ticker/btc-usd")
-//   .then((res) => {
-//     console.log("Response Successfull - Parsing Data:", res);
-//     return res.json();
-//   })
-//   .then((data) => {
-//     console.log("Data parsed: ", data);
-//   })
-//   .catch((err) => console.log(err));
+const form = document.querySelector("#searchForm");
+const showToSearch = document.querySelector("#showSearch");
+const imgContainer = document.querySelector(".container");
 
-// const fetchBitcoinPrice = async () => {
-//   try {
-//     const res = await fetch("https://api.cryptonator.com/api/ticker/btc-usd");
-//     const data = await res.json();
-//     console.log(data);
-//   } catch (e) {
-//     console.log(e);
-//   }
-// };
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const input = form.elements.query.value;
+  fetchMovies(input);
 
-// const fetchBitcoinPrice = async () => {
-//   try {
-//     const res = await axios.get(
-//       "https://api.cryptonator.com/api/ticker/btc-usd"
-//     );
-//     const headers = res.headers;
-//     const data = res.data;
-//     const req = res.request;
-//     console.log(headers);
-//     console.log(data);
-//     console.log(req.status);
-//   } catch (e) {
-//     console.log(e);
-//   }
-// };
+  form.elements.query.value = "";
+});
 
-const fetchDadJoke = async () => {
+const fetchMovies = async (title) => {
   const config = {
-    headers: {
-      Accept: "application/json",
+    params: {
+      q: title,
     },
   };
-  const res = await axios.get("https://icanhazdadjoke.com/", config);
-  p.innerText = res.data.joke;
+  const res = await axios.get(`http://api.tvmaze.com/search/shows?`, config);
+  console.log(res.data);
+  for (const movie of res.data) {
+    if (movie.show.image) {
+      const img = document.createElement("img");
+      img.src = movie.show.image.medium;
+      imgContainer.append(img);
+    }
+  }
 };
-
-const button = document.querySelector("#generateJoke");
-const p = document.querySelector("#jokecontext");
-
-button.addEventListener("click", fetchDadJoke);
