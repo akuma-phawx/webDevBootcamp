@@ -18,18 +18,30 @@
 //   }
 // };
 
-const fetchBitcoinPrice = async () => {
-  try {
-    const res = await axios.get(
-      "https://api.cryptonator.com/api/ticker/btc-usd"
-    );
-    const headers = res.headers;
-    const data = res.data;
-    const req = res.request;
-    console.log(headers);
-    console.log(data);
-    console.log(req.status);
-  } catch (e) {
-    console.log(e);
-  }
+// const fetchBitcoinPrice = async () => {
+//   try {
+//     const res = await axios.get(
+//       "https://api.cryptonator.com/api/ticker/btc-usd"
+//     );
+//     const headers = res.headers;
+//     const data = res.data;
+//     const req = res.request;
+//     console.log(headers);
+//     console.log(data);
+//     console.log(req.status);
+//   } catch (e) {
+//     console.log(e);
+//   }
+// };
+
+const fetchDadJoke = async () => {
+  const config = {
+    headers: {
+      Accept: "application/json",
+    },
+  };
+  const res = await axios.get("https://icanhazdadjoke.com/", config);
+  console.log(res.data.joke);
 };
+
+fetchDadJoke();
